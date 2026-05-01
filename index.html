@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO (IMPORTANT FOR GOOGLE) -->
+    <title>My Website</title>
+    <meta name="description" content="My personal website where I share information about myself and my work.">
+    <meta name="keywords" content="personal website, portfolio, student, projects">
+    <meta name="author" content="Your Name">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background: #555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        input {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My First Website</h1>
+    <p>Built by me</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <!-- SEARCH BAR -->
+    <input type="text" id="searchBox" placeholder="Search my site..." onkeyup="searchContent()">
+
+    <div class="card">
+        <h2>Welcome</h2>
+        <p>This is my website. I'm learning how to code.</p>
+    </div>
+
+    <div class="card">
+        <h2>About Me</h2>
+        <p>I am building my first website and learning HTML, CSS, and JavaScript.</p>
+    </div>
+
+    <div class="card">
+        <h2>Projects</h2>
+        <p>Here are some things I’ve worked on.</p>
+    </div>
+
+</div>
+
+<script>
+function searchContent() {
+    let input = document.getElementById("searchBox").value.toLowerCase();
+    let cards = document.getElementsByClassName("card");
+
+    for (let i = 0; i < cards.length; i++) {
+        let text = cards[i].innerText.toLowerCase();
+
+        if (text.includes(input)) {
+            cards[i].style.display = "block";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
